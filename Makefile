@@ -34,7 +34,10 @@ endif
 .PHONY: clean
 
 $(EXE) : $(OBJS) 
-	gcc -o $@ $(CFLAGS) $(OBJS) $(LIBS)
+	gcc -Wall -Wextra -o $@ $(CFLAGS) $(OBJS) $(LIBS)
+
+no_warnings: $(OBJS)
+	gcc -o $(EXE) $(CFLAGS) $(OBJS) $(LIBS)
 
 main.o : main.c board.h sim.h graphics30.h timefns.h cse30life.h cse30life.h
 board.o : board.c board.h cse30life.h
