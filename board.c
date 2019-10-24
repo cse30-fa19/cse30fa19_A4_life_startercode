@@ -18,11 +18,11 @@
  * - read the second line which is the number of cols
  * - set the # of rows and # of cols in the boards structure
  * - malloc bufferA and bufferB 
+ * - Set currentBuffer and nextBuffer
  * - clear both board buffers
  * - read the file until done.  each row contains a row and a columns separted by
  *   white space
- *     for each line, set the cell in the next buffer
- * - swap the buffers 
+ *     for each line, set the cell in the current buffer
  * - close the file
  * - return the boards pointer
  */
